@@ -38,7 +38,12 @@
                 <a href="#answers" class="text-white">Respuesta del examen</a>
               </li>
               <li>
-                <a href="#" class="text-white">Iniciar sesión</a>
+                <button id="btnNavLogin" type="button" class="btn btn-link text-white p-0" data-toggle="modal" data-target="#loginModal">
+                  Iniciar sesión
+                </button>
+                <button id="btnLogout" type="button" class="btn btn-link text-white p-0 d-none">
+                  Cerrar sesión
+                </button>
               </li>
             </ul>
           </div>
@@ -288,6 +293,34 @@
     </ul>
   </footer>
 
+  <!-- Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="loginForm">
+            <div class="form-group">
+              <label for="inputEmail">Correo electrónico</label>
+              <input type="email" class="form-control" id="inputEmail" placeholder="Correo electrónico">
+            </div>
+            <div class="form-group">
+              <label for="inputPassword">Contraseña</label>
+              <input type="password" class="form-control" id="inputPassword" placeholder="Contraseña">
+            </div>
+            <button id="btnLogin" class="btn btn-primary">Iniciar sesión</button>
+            <button id="btnSignUp" class="btn btn-secundary">Regístrate</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="js/jquery-3.2.1.slim.min.js"></script>
@@ -296,6 +329,7 @@
   <!-- Plugins JS -->
   <script src="js/ekko-lightbox.min.js"></script>
   <script src="js/highlight.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
   <!-- Custom JS -->
   <script src="js/scripts.js"></script>
 </body>
