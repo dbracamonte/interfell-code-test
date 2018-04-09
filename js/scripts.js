@@ -38,8 +38,15 @@ $(document).ready(function() {
     // Sign in
     const promise = auth.signInWithEmailAndPassword(email, pass);
     promise
-      .then(e => console.log('Login:', e))
-      .catch(e => console.log('Login Error:', e.message))
+      .then($('#loginModal').modal('hide'))
+      .then(e => iziToast.info({
+        icon: false,
+        message: `Bienvenido ${email}`
+      }))
+      .catch(e => iziToast.warning({
+        icon: false,
+        message: `${e.message}`
+      }))
   })
 
   btnSignUp.addEventListener('click', e => {
@@ -50,8 +57,15 @@ $(document).ready(function() {
     // Sign in
     const promise = auth.createUserWithEmailAndPassword(email, pass);
     promise
-      .then(e => console.log('SignUp:', e))
-      .catch(e => console.log('SignUp Error:', e.message))
+      .then($('#loginModal').modal('hide'))
+      .then(e => iziToast.info({
+        icon: false,
+        message: `Bienvenido ${email}`
+      }))
+      .catch(e => iziToast.warning({
+        icon: false,
+        message: `${e.message}`
+      }))
   })
 
   btnLogout.addEventListener('click', e => {
@@ -61,14 +75,12 @@ $(document).ready(function() {
   // RealTime listener
   firebase.auth().onAuthStateChanged(user => {
     if (user) {
-      console.log(`User: ${user}`);
       btnNavLogin.classList.add('d-none');
       btnLogout.classList.remove('d-none');
       // User is signed in.
       const displayName = user.displayName;
       const photoURL = user.photoURL;
     } else {
-      console.log('Not logged in');
       btnNavLogin.classList.remove('d-none');
       btnLogout.classList.add('d-none');
     }
