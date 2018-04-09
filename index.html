@@ -216,19 +216,37 @@
               </p>
               <pre>
                 <code class="JavaScript dracula">
-                  $(document).ready(function() {
-                    // Código
-                  });
+                  // this, se refiere al objeto global.
+
+                  function car(brand, model, year) {
+                    this.brand = brand;
+                    this.model = model;
+                    this.year = year;
+                  }
+                  var carro = new car("Mustang", "Ford", 1967);
                 </code>
               </pre>
             </div>
             <div class="tab-pane fade" id="nav-answer-2" role="tabpanel" aria-labelledby="nav-answer-2-tab">
               <p class="lead">¿Cuáles son las etiquetas de HTML básicas para maquetar una página web?</p>
               <pre>
-                <code class="JavaScript dracula">
-                  $(document).ready(function() {
-                    // Código
-                  });
+                <code class="xml dracula">
+                  &lt;header&gt;
+                  &lt;nav&gt;
+                  &lt;aside&gt;
+                  &lt;main&gt;
+                  &lt;div&gt;
+                  &lt;section&gt;
+                  &lt;article&gt;
+                  &lt;figure&gt;
+                  &lt;footer&gt;
+                  &lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;,&lt;h4&gt;
+                  &lt;p&gt;
+                  &lt;a&gt;
+                  &lt;img&gt;
+                  &lt;ol&gt;
+                  &lt;ul&gt;
+                  &lt;li&gt;
                 </code>
               </pre>
             </div>
@@ -237,9 +255,21 @@
                 indica cuál es la alternativa.</p>
               <pre>
                 <code class="JavaScript dracula">
-                  $(document).ready(function() {
-                    // Código
+                  // jQuery
+                  $(function() {
+                    $(document.body).append('El DOM ya cargó');
                   });
+                  
+                  // jQuery
+                  $(document).ready(function () {
+                    $(document.body).append('El DOM ya cargó');
+                  });
+                  
+                  Vanilla JS con ES6
+                  document.addEventListener('DOMContentLoaded', () => document.write('El DOM ya cargó'), false);
+                </code>
+                <code class="xml dracula">
+                  
                 </code>
               </pre>
             </div>
