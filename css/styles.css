@@ -1,3 +1,51 @@
+a, .btn-link {
+  color: #a28569;
+}
+
+a:hover, .btn-link:hover {
+  color: #7b644d;
+}
+
+.text-icp-l {
+  color: #a28569;
+}
+
+.text-icp-d {
+  color: #7b644d;
+}
+
+.bg-ict-l {
+  background-color: #403c3a;
+}
+
+.bg-ict-d {
+  background-color: #2b2725; 
+}
+
+.carousel-caption {
+  background-color: rgba(43,39,37,.6);
+  padding-left: 12px;
+  padding-right: 12px; 
+}
+
+.card {
+  border-color: #a28569;
+  overflow: hidden;
+}
+
+.card img {
+  max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.card img:hover {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 footer {
   padding: 2rem 0;
   text-align: center;
